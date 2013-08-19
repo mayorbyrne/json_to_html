@@ -1,0 +1,17 @@
+{
+  "name": "json_to_html",
+  "version": "0.0.0",
+  "description": "json_to_html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ecorkevin/json_to_html.git"
+  },
+  "author": "Kevin Moritz",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies" :
+  	{ 
+  	"commander" : "latest",
+  	"copy-paste" : "latest"
+  	}
+}
