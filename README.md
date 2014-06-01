@@ -15,7 +15,7 @@ From the command line, run
 
 ### please note the single quotes
 		
-The resulting html string will be copied to your clipboard, with `<pre>` tags attached:
+The resulting html string will be copied to your clipboard, with `<pre>` tags attached, ready for use in your javascript code:
 
 `<pre>"{<br/>&nbsp;&nbsp;\"WHATEVER\":&nbsp;\"STRING\",<br/>&nbsp;&nbsp;\"YOU\":&nbsp;\"NEED&nbsp;CONVERTED\"<br/>}"</pre>`
 
