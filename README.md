@@ -3,15 +3,19 @@ json_to_html
 
 Ever needed a JSON string inside an HTML page, with all the prettiness?  I did.
 
-
 # USAGE
 
-from the command line, run
+There are two ways to use json_to_html.
 
-		index.js -s 'WHATEVER STRING YOU NEED CONVERTED'
+You can use it programmatically, by requiring index.js, or you can use it from the command line.
+
+From the command line, run
+
+`cli.js -s '{"WHATEVER": "STRING", "YOU": "NEED CONVERTED"}'`
 
 ### please note the single quotes
 		
-# COPY PASTE
+The resulting html string will be copied to your clipboard, with `<pre>` tags attached:
 
-the resulting html string will be copied to your clipboard
+`<pre>"{<br/>&nbsp;&nbsp;\"WHATEVER\":&nbsp;\"STRING\",<br/>&nbsp;&nbsp;\"YOU\":&nbsp;\"NEED&nbsp;CONVERTED\"<br/>}"</pre>`
+

@@ -4,19 +4,32 @@
  * Module dependencies.
  */
 
-var program = require('commander');
-var clipboard = require('copy-paste');
+var program = require('commander'),
+  clipboard = require('copy-paste');
 
 program
 	.option('-s, --string [string]', 'desc', '{"test":"string"}')
 	.parse(process.argv);
 
-var cool = function (jsonstring) {
-	var parse = JSON.parse(jsonstring);
-	var strung = JSON.stringify(parse, null, 2);
-	strung = strung.replace(/ /gi, "&nbsp;");
-	strung = strung.replace(/\n/gi, "<br/>");
-	clipboard.copy('"<pre>'+JSON.stringify(strung)+'"</pre>"');
-}
+var convert = function (input) {
+  //make sure input is jSON
+  function isJson(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+  }
+  if (isJson(input)){
+    var parse = JSON.parse(input);
+    var str = JSON.stringify(parse, null, 2);
+    str = str.replace(/ /gi, "&nbsp;");
+    str = str.replace(/\n/gi, "<br/>");
+    clipboard.copy('<pre>'+JSON.stringify(str)+'</pre>');
+  } else {
+    throw new Error('Input string is not valid JSON');
+  };
+};
 
-cool(program.string);
+convert(program.string);

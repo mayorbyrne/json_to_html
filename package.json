@@ -8,10 +8,22 @@
   },
   "author": "Kevin Moritz",
   "license": "BSD",
-  "readmeFilename": "README.md",
-  "dependencies" :
-  	{ 
-  	"commander" : "latest",
-  	"copy-paste" : "latest"
-  	}
+  "dependencies": {
+    "commander": "latest",
+    "copy-paste": "latest"
+  },
+  "bugs": {
+    "url": "https://github.com/ecorkevin/json_to_html/issues"
+  },
+  "homepage": "https://github.com/ecorkevin/json_to_html",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "should": "^4.0.0"
+  },
+  "scripts": {
+    "test": "mocha --ui tdd --reporter spec test"
+  }
 }
